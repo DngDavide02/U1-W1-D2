@@ -22,13 +22,16 @@ public class Main {
                 System.out.println("la stringa è dispari");
             }
         }
-        public static void annoBisestile(){
-            int anno = 900;
-            if(anno % 4 == 0 && anno % 100 == 0 && anno % 400 == 0) {
-                System.out.println("l'anno "+ anno +" è bisestile");
-            }else {
-                System.out.println("l'anno "+ anno +" non è bisestile");
-            }
-        }
+    public static void annoBisestile() {
+        int anno = 900;
 
+        
+        if ((anno % 4 == 0) && ((anno % 100 != 0) || (anno % 400 == 0))) {
+            System.out.println("L'anno " + anno + " è bisestile");
+        } else {
+            System.out.println("L'anno " + anno + " non è bisestile");
+        }
     }
+
+
+}
