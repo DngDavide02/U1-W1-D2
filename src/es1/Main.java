@@ -9,7 +9,11 @@ public class Main {
         System.out.println("------------------------------STRINGA PARI DISPARI------------------------------------------");
             stringaPariDispari();
         System.out.println("------------------------------ANNO BISESTILE------------------------------------------");
-            annoBisestile();
+
+        System.out.println(annoBisestile(900));
+        System.out.println(annoBisestile(400));
+        System.out.println(annoBisestile(1900));
+        System.out.println(annoBisestile(2020));
         }
         public static void stringaPariDispari(){
             Scanner string = new Scanner(System.in);
@@ -22,14 +26,12 @@ public class Main {
                 System.out.println("la stringa è dispari");
             }
         }
-    public static void annoBisestile() {
-        int anno = 900;
-
+    public static boolean annoBisestile(int anno) {
         
         if ((anno % 4 == 0) && ((anno % 100 != 0) || (anno % 400 == 0))) {
-            System.out.println("L'anno " + anno + " è bisestile");
+            return true;
         } else {
-            System.out.println("L'anno " + anno + " non è bisestile");
+            return false;
         }
     }
 
